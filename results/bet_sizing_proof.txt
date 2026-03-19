@@ -1,0 +1,30 @@
+Theorem: Under no-count constraints with infinite shoe, optimal bet = min_bet.
+
+Proof (two parts):
+
+Part 1 — Linearity and sign of EV.
+  Let ev = -0.00161 be the EV per unit bet (negative without counting).
+  For N hands with constant bet b:
+    E[profit] = N · b · ev
+  Since ev < 0, E[profit] = N · b · ev < 0 for any b > 0.
+  E[profit] is linear in b, so reducing b always improves (lessens) expected loss.
+  The minimum legal bet b_min minimizes expected loss: E[profit] = N · b_min · ev.
+
+Part 2 — No information gain from varying bets.
+  Under infinite shoe, successive hand outcomes (X_1, X_2, ..., X_N) are i.i.d.
+  The joint distribution P(X_1,...,X_N) is independent of the bet sequence
+  (b_1,...,b_N), because bets do not affect card distributions.
+  Therefore no adaptive bet strategy can improve EV per hand.
+  By Part 1, minimum constant bet minimizes total expected loss.
+
+Kelly Criterion note:
+  Kelly optimal fraction f* = ev / variance.
+  For ev < 0, Kelly prescribes f* < 0, i.e., do not bet at all.
+  Under the constraint b >= b_min, Kelly collapses to b_min.
+
+Ruin probability:
+  P(ruin by hand N) is a monotone increasing function of bet size b
+  (for fixed bankroll and ev < 0).
+  Minimum bet minimizes ruin probability subject to b >= b_min.
+
+Q.E.D.

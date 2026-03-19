@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "blackjack_opt"
+version = "0.1.0"
+description = "Blackjack Strategy Optimization Study"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+dev  = ["pytest", "pytest-cov"]
+fast = ["numba"]
+
+[tool.pytest.ini_options]
+testpaths = ["blackjack_opt/tests"]
+addopts   = "-v"
