@@ -1,13 +1,5 @@
 # Blackjack Strategy Optimization Study
 
-Code and manuscript source for the study:
-
-`Policy Recovery and No-Count Bet-Sizing Optimality in Infinite-Shoe Blackjack`
-
-Repository:
-
-`https://github.com/kevinmsong/BlackjackStrategyOptimizationStudy`
-
 ## Contents
 
 - `blackjack_opt/`: simulator, oracle solver, optimizers, evaluation, and export code
